@@ -60,6 +60,14 @@ a.phone{color:inherit;text-decoration:none}
 a.phone:hover{color:var(--amber-deep)}
 .phone{font-family:var(--font-display);font-weight:700;letter-spacing:.02em;font-variant-numeric:tabular-nums}
 
+.calltxt{display:none}
+@media (max-width:760px){
+  .top .callbtn{display:inline-flex;align-items:center;gap:.35em;background:var(--amber);color:#1d1408;padding:.55rem 1.1rem;border-radius:999px;font-size:.95rem}
+  .top .callbtn:hover{background:var(--gold);color:#1d1408}
+  .top .callbtn .calltxt{display:inline}
+  .top .callbtn::before{content:"";width:1em;height:1em;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z'/%3E%3C/svg%3E") center/contain no-repeat}
+}
+
 /* hero */
 .hero{background:linear-gradient(180deg,var(--paper-2),var(--paper));overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px 64px}
@@ -141,7 +149,7 @@ footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:12px 28px;justif
       <a href="#about">About us</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="phone" href="tel:+18432912704">843.291.2704</a>
+    <a class="phone callbtn" href="tel:+18432912704"><span class="calltxt">Call </span>843.291.2704</a>
   </div>
 </header>
 
